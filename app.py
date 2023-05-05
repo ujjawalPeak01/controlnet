@@ -43,7 +43,7 @@ class InferlessPythonModel:
         buff = BytesIO()
         inpaint_image.save(buff, format="PNG")
         img_str = base64.b64encode(buff.getvalue())
-        return img_str
+        return {"generated_image_base64": img_str}
 
     def finalize(self):
         self.pipe = None
