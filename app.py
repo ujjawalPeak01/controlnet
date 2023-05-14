@@ -40,6 +40,7 @@ class InferlessPythonModel:
             controlnet_conditioning_image=control_image, 
             mask_image=mask_image,
         ).images[0]
+        
         buff = BytesIO()
         inpaint_image.save(buff, format="PNG")
         img_str = base64.b64encode(buff.getvalue()).decode()
