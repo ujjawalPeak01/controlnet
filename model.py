@@ -17,6 +17,7 @@ class TritonPythonModel:
             image_url = pb_utils.get_input_tensor_by_name(request, "image_url")
             mask_url = pb_utils.get_input_tensor_by_name(request, "mask_url")
             mask_url = pb_utils.get_input_tensor_by_name(request, "control_url")
+            
             prompt_string = prompt.as_numpy()[0].decode()
             image_url_string = image_url.as_numpy()[0].decode()
             mask_url_string = mask_url.as_numpy()[0].decode()
