@@ -32,7 +32,6 @@ class InferlessPythonModel:
         mask_image = InferlessPythonModel.download_image(mask_url).resize((512, 512))
         control_image = InferlessPythonModel.download_image(control_url).resize((512, 512))
         generator = torch.manual_seed(0)
-
         inpaint_image = self.pipe(
             prompt=prompt, 
             num_inference_steps=20,
