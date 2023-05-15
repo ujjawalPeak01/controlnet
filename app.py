@@ -27,6 +27,7 @@ class InferlessPythonModel:
         image_url = inputs["image_url"]
         mask_url = inputs["mask_url"]
         control_url = inputs["control_url"]
+        
         init_image = InferlessPythonModel.download_image(image_url).resize((512, 512))
         mask_image = InferlessPythonModel.download_image(mask_url).resize((512, 512))
         control_image = InferlessPythonModel.download_image(control_url).resize((512, 512))
